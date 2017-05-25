@@ -16,5 +16,5 @@ class User(Base):
         self.group_number = group_number
 
     def __repr__(self):
-        return "<User(name='%s', fullname='%s', password='%s')>" % (
-                             self.name, self.fullname, self.password)
+        return "<User(fullname='%s', faculty='%s', course='%s', group_number='%s')>" % (
+                             self.fullname, self.faculty, self.course, self.group_number)
