@@ -1,13 +1,11 @@
-from dormitory_site.models.base import Base
-from sqlalchemy import Column, Integer, String
+from dormitory_site.server import db
 
-class User(Base):
-    __tablename__ = 'users'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    fullname = Column(String(128), unique=True, nullable=False)
-    faculty = Column(String(128), nullable=False)
-    course = Column(String(128), nullable=False)
-    group_number = Column(String(128), nullable=False)
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    fullname = db.Column(db.String(128), unique=True, nullable=False)
+    faculty = db.Column(db.String(128), nullable=False)
+    course = db.Column(db.String(128), nullable=False)
+    group_number = db.Column(db.String(128), nullable=False)
 
     def __init__(self, fullname, faculty, course, group_number):
         self.fullname = fullname
