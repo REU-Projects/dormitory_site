@@ -11,5 +11,5 @@ def login():
         user = User.query.filter_by(fullname=form.openid.data).first_or_404()
         return render_template('show_user.html', user=user)
     return render_template('login.html', 
-        title = 'Sign In',
+        title = 'Dormitory site',
         form = form)
