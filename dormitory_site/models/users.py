@@ -14,5 +14,5 @@ class User(db.Model):
         self.group_number = group_number
 
     def __repr__(self):
-        return "<User(fullname='%s', faculty='%s', course='%s', group_number='%s')>" % (
+        return "Fullname %s, Faculty %s, Course %s, Group number %s" % (
                              self.fullname, self.faculty, self.course, self.group_number)
