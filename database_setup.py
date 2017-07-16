@@ -2,9 +2,9 @@ from dormitory_site.server import db
 from dormitory_site.models import users 
 db.create_all()
 
-vasya = users.User("Zufra", "FMESI", "1", "417")
+student = users.User("Some student", "Some faculty", "1", "1")
 
-db.session.add(vasya)
+db.session.add(student)
 db.session.commit()
 
 print("DB created!")
